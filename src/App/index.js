@@ -4,7 +4,7 @@ import './App.css';
 import { AppProvider } from './AppProvider';
 import AppLayout from './AppLayout';
 import AppBar from './AppBar';
-import WelcomeMessage from './WelcomeMessage';
+import Settings from '../Settings'
 
 class App extends Component {
   render() {
@@ -12,7 +12,7 @@ class App extends Component {
       <AppLayout>
         <AppProvider>
           <AppBar/>
-          <WelcomeMessage/>
+          <Settings/>
         </AppProvider>
       </AppLayout>
     );
