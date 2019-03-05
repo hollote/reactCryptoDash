@@ -12,7 +12,7 @@ export class AppProvider extends React.Component {
     this.state = {
       firstVisit: true,
       page: 'dashboard',
-      prices: null,
+      prices: [],
       favorites: ['BTC', 'ETH', 'DOGE', 'XMR'],
       ...this.savedSettings(),
       addCoin: this.addCoin,
@@ -50,6 +50,7 @@ export class AppProvider extends React.Component {
   };
 
   fetchPrices = async () => {
+    debugger;
     if (this.state.firstVisit) {
       return;
     }
@@ -78,7 +79,7 @@ export class AppProvider extends React.Component {
       return {page: 'settings', firstVisit: true};
     }
     let {favorites} = cryptoDashData;
-    return {favorites};
+    return {favorites, firstVisit: false};
   }
 
   confirmFavorites = () => {
