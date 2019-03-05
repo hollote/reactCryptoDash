@@ -25,7 +25,7 @@ export default function ({coinKey, topSection}) {
         return <TileClass
           onClick={clickCoinHandler(topSection, coinKey, addCoin, removeCoin)}
         >
-          <CoinHeaderGrid topSection={topSection} name={coin.CoinName} symbol={coin.Symbol}/>
+          <CoinHeaderGrid topSection={topSection} name={coin.FullName}/>
           <CoinImage coin={coin}/>
         </TileClass>
       }}

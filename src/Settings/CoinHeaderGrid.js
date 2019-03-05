@@ -4,11 +4,7 @@ import { DeletableTile } from "../Shared/Tile";
 
 export const CoinHeaderGridStyled = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-`;
-
-export const CoinSymbol = styled.div`
-  justify-self: right;
+  grid-template-columns: 11fr 1fr;
 `;
 
 const DeleteIcon = styled.div`
@@ -26,9 +22,7 @@ export default function ({name, symbol, topSection}) {
       <div>{name}</div>
       {topSection ? (
         <DeleteIcon> X </DeleteIcon>
-      ) : (
-        <CoinSymbol>{symbol}</CoinSymbol>
-      )}
+      ) : null}
     </CoinHeaderGridStyled>
   )
 }
