@@ -8,7 +8,7 @@ export default function (props) {
         if (!coinList) {
           return <div>Loading coins</div>
         }
-        if (!firstVisit && !prices.length) {
+        if (!firstVisit && !prices) {
           return <div>Loading prices</div>
         }
         return <div>{props.children}</div>
